@@ -1,0 +1,82 @@
+a {
+    
+    text-decoration: none;
+    color: aqua;
+}
+
+.hf a{
+    margin-right: 7px;
+}
+/* Hide the radio buttons */
+.star-rating input {
+    display: none;
+}
+
+/* Style the stars */
+.star-rating label {
+    font-size: 50px; /* Default font size for larger screens */
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+/* When radio is selected, change the color of the stars */
+.star-rating input:checked ~ label {
+    color: gold;
+}
+
+/* Style for when the user is hovering over a star and has selected one */
+.star-rating input:checked:hover ~ label {
+    color: gold;
+}
+
+.star-rating input:checked:hover {
+    color: gold;
+}
+
+/* Rating output styles */
+#rating-output {
+    color: aliceblue;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .star-rating label {
+        font-size: 30px; /* Reduce star size for mobile devices */
+    }
+
+    #rating-output {
+        font-size: 16px; /* Adjust font size for better readability on small screens */
+    }
+}
+
+/* Tablet responsiveness */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .star-rating label {
+        font-size: 40px; /* Adjust star size for tablets */
+    }
+
+    #rating-output {
+        font-size: 17px; /* Adjust font size for medium screens */
+    }
+}
+
+/* Desktop responsiveness */
+@media screen and (min-width: 1025px) {
+    .star-rating label {
+        font-size: 50px; /* Default font size for large screens */
+    }
+
+    #rating-output {
+        font-size: 18px; /* Default font size for large screens */
+    }
+}
